@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <RelativeLayout
+            android:id="@+id/rlAvaIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp" >
+
+            <com.example.farmerboy.chatbbd.views.CircleImageView
+                android:id="@+id/ivAvaIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_avatar_pattern"
+                />
+
+            <ImageView
+                android:id="@+id/ivNew"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_online"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlRight"
+            android:layout_toRightOf="@+id/rlAvaIcon"
+            android:layout_toLeftOf="@+id/tvTime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="18dp"
+                    android:text="Name"
+                    android:textColor="@android:color/black"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

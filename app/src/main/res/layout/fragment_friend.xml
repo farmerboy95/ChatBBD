@@ -1,16 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ListView
         android:id="@+id/lvFriends"
+        android:layout_above="@+id/rlFooter"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="@null"
         android:listSelector="@drawable/list_item_selector">
 
-
     </ListView>
 
-</LinearLayout>
+    <RelativeLayout
+        android:background="@android:color/white"
+        android:id="@+id/rlFooter"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE" />
+
+        <ImageButton
+            android:id="@+id/btnSearchFriend"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_search_friend"
+            android:layout_marginLeft="15dp"/>
+
+        <ImageButton
+            android:id="@+id/btnAddFriend"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_add_friend"
+            android:layout_marginRight="15dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

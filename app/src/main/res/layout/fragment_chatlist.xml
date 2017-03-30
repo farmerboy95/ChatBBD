@@ -35,36 +35,6 @@
 
     </ListView>
 
-    <RelativeLayout
-        android:background="@android:color/white"
-        android:id="@+id/rlFooter"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true">
 
-        <View
-            android:layout_alignParentTop="true"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#EEEEEE" />
-
-        <ImageButton
-            android:id="@+id/btnSearchChat"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_centerVertical="true"
-            android:background="@drawable/ic_searchchat"
-            android:layout_marginLeft="15dp"/>
-
-        <ImageButton
-            android:id="@+id/btnAddChat"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/ic_addchat"
-            android:layout_marginRight="15dp"/>
-
-    </RelativeLayout>
 
 </RelativeLayout>
