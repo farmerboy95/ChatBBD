@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp">
+
+        <RelativeLayout
+            android:id="@+id/rlAvaIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp" >
+
+            <com.example.farmerboy.chatbbd.views.CircleImageView
+                android:id="@+id/ivAvaIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_avatar_pattern"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:id="@+id/ivNew"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_new"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlRight"
+            android:layout_toRightOf="@+id/rlAvaIcon"
+            android:layout_toLeftOf="@+id/tvTime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="18dp"
+                    android:text="Name"
+                    android:textColor="@android:color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/tvContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvName"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="Status"
+                    android:textColor="#BDBDBD"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="55dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentRight="true"
+            android:textSize="9dp"
+            android:textAlignment="center"
+            android:text="11/06/2016\n20:58"/>
+
+        <View
+            android:id="@+id/viewLine"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_alignLeft="@+id/rlRight"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="#EEEEEE" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
