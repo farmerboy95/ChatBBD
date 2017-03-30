@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1063630726723",
+    "firebase_url": "https://chatbbd.firebaseio.com",
+    "project_id": "chatbbd",
+    "storage_bucket": "chatbbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063630726723:android:c27932d5d582c6a0",
+        "android_client_info": {
+          "package_name": "com.example.farmerboy.chatbbd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063630726723-lgem132fh23ersrumhbtgqf020leflka.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1-Gkg6HkFr4kopx18FKOkTxk_uurE4OA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
