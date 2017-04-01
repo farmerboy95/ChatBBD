@@ -16,6 +16,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         addControl();
+        addEvent();
+
+    }
+
+    private void addEvent() {
 
     }
 
