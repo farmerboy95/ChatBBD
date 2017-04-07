@@ -28,7 +28,6 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/custom_button"
         android:text="ĐĂNG NHẬP"
-        android:onClick="ShowLogin"
         android:textColor="@android:color/white"/>
 
     <TextView

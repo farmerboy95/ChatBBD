@@ -9,9 +9,6 @@ import android.widget.Toast;
 
 import com.example.farmerboy.chatbbd.R;
 
-/**
- *  Created by farmerboy on 3/30/2017.
- */
 public class WelcomeActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button mBtnLogin;
@@ -33,8 +30,9 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
             Intent intent = new Intent(WelcomeActivity.this,LoginActivity.class);
             startActivity(intent);
         }
-    }
 
+
+    }
 
 
 
