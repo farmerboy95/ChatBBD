@@ -1,5 +1,6 @@
 package com.example.farmerboy.chatbbd.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -26,8 +27,15 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View v) {
         int i = v.getId();
+
         if (i == R.id.btnLogin) {
-            Toast.makeText(WelcomeActivity.this, "Sai cmnr", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(WelcomeActivity.this, "Sai cmnr", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(WelcomeActivity.this,LoginActivity.class);
+            startActivity(intent);
         }
     }
+
+
+
+
 }
