@@ -1,4 +1,6 @@
+/*
 package com.example.farmerboy.chatbbd.activities;
+
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -15,11 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.UserProfileChangeRequest;
 
-/**
- *  Created by farmerboy on 3/30/2017.
- */
 public class Test extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
@@ -117,4 +115,5 @@ public class Test extends AppCompatActivity implements View.OnClickListener {
                     });
         }
     }
-}
+
+}*/

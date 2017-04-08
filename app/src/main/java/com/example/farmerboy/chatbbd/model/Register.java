@@ -2,7 +2,7 @@ package com.example.farmerboy.chatbbd.model;
 
 import java.io.Serializable;
 
-public class account implements Serializable{
+public class Register implements Serializable{
 
     private int idUser;
     private String username;
@@ -10,9 +10,9 @@ public class account implements Serializable{
     private String fullname;
     private String email;
 
-    public account() {  }
+    public Register() {  }
 
-    public account(int idUser, String username, String password, String fullname, String email) {
+    public Register(int idUser, String username, String password, String fullname, String email) {
         this.idUser = idUser;
         this.username = username;
         this.password = password;
@@ -62,7 +62,7 @@ public class account implements Serializable{
 
     @Override
     public String toString() {
-        return "account{" +
+        return "Register{" +
                 "idUser=" + idUser +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +

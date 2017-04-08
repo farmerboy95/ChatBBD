@@ -5,13 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.farmerboy.chatbbd.R;
 
-public class RegisterActivity extends AppCompatActivity {
+import java.io.Serializable;
+
+
+public class MainActivity extends AppCompatActivity  implements Serializable{
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_main);
     }
-
-
 }
