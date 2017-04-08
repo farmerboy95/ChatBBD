@@ -57,7 +57,7 @@ public class Test extends AppCompatActivity implements View.OnClickListener {
         };
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
+        
 
 
     }

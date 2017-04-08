@@ -46,26 +46,9 @@
         android:background="@android:color/white">
 
         <EditText
-            android:id="@+id/etUser"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:hint="Nhập tên đăng nhập"
-            android:textSize="18dp"
-            android:background="@null"/>
-
-        <View
-            android:id="@+id/belowUser"
-            android:layout_below="@+id/etUser"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/line"/>
-
-        <EditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/belowUser"
             android:layout_margin="15dp"
             android:hint="Nhập tên hiển thị"
             android:textSize="18dp"
