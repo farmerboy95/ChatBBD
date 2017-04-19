@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background">
+    android:layout_height="match_parent">
 
     <android.support.v7.widget.Toolbar
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -31,48 +30,42 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/btnHome"
-                android:text="Đổi tên hiển thị"
+                android:text="Đổi ảnh đại diện"
                 android:textColor="@color/white"
                 android:textSize="18dp" />
 
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 
-    <RelativeLayout
-        android:id="@+id/rlHeader"
+    <com.example.farmerboy.chatbbd.views.CircleImageView
         android:layout_below="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/white">
-
-        <EditText
-            android:id="@+id/etName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:hint="Nhập tên hiển thị mới"
-            android:fontFamily=""
-            android:textSize="18dp"
-            android:background="@null"/>
-
-        <View
-            android:id="@+id/belowName"
-            android:layout_below="@+id/etName"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/line"/>
-
-    </RelativeLayout>
+        android:id="@+id/ivAvaIcon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_avatar_pattern"/>
 
     <Button
-        android:id="@+id/btnCont"
+        android:id="@+id/btnChooseFile"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rlHeader"
-        android:layout_marginTop="25dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/custom_button"
-        android:text="Đổi tên hiển thị"
-        android:textColor="@color/white"/>
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/ivAvaIcon"
+        android:text="Chọn hình ảnh"
+        android:textColor="@android:color/white"/>
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/custom_button"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/btnChooseFile"
+        android:text="Xác nhận"
+        android:textColor="@android:color/white"/>
 
 </RelativeLayout>

@@ -24,6 +24,10 @@
         <activity android:name=".activities.ForgetPasswordActivity"/>
         <activity android:name=".activities.MainActivity"/>
         <activity android:name=".activities.RegisterActivity"/>
+        <activity android:name=".activities.InformationActivity"/>
+        <activity android:name=".activities.NameChangeActivity"/>
+        <activity android:name=".activities.PasswordChangeActivity"/>
+        <activity android:name=".activities.AvatarChangeActivity"/>
     </application>
 
 </manifest>

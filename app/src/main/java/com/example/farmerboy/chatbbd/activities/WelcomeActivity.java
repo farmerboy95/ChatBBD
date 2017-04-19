@@ -1,5 +1,6 @@
 package com.example.farmerboy.chatbbd.activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -53,8 +54,22 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
         if (user != null) {
             if (user.isEmailVerified()) {
                 Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, 1);
             }
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
         }
     }
 
@@ -68,6 +83,16 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
         else if (i == R.id.tvRegister) {
             Intent intent = new Intent(WelcomeActivity.this, RegisterActivity.class);
             startActivity(intent);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == 1) {
+            if (resultCode != 1001){
+                finish();
+            }
         }
     }
 }
