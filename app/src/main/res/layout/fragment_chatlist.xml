@@ -3,30 +3,8 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:id="@+id/rlHeader"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:background="#FFFF8D">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="Không có kết nối" />
-
-    </RelativeLayout>
-
-    <View
-        android:id="@+id/viewLine"
-        android:layout_below="@+id/rlHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="#BDBDBD"/>
-
     <ListView
         android:id="@+id/lvChatList"
-        android:layout_below="@+id/viewLine"
         android:layout_above="@+id/rlFooter"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -46,17 +46,17 @@
         android:background="@android:color/white">
 
         <EditText
-            android:id="@+id/etUser"
+            android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:hint="Nhập tên đăng nhập của bạn bè"
+            android:hint="Nhập Email đăng ký của bạn bè"
             android:textSize="18dp"
             android:background="@null"/>
 
         <View
             android:id="@+id/belowUser"
-            android:layout_below="@+id/etUser"
+            android:layout_below="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/line"/>

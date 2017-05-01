@@ -40,8 +40,8 @@
     <com.example.farmerboy.chatbbd.views.CircleImageView
         android:layout_below="@+id/toolbar"
         android:id="@+id/ivAvaIcon"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="150px"
+        android:layout_height="150px"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:src="@drawable/ic_avatar_pattern"/>

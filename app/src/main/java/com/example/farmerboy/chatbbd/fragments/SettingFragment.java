@@ -145,6 +145,9 @@ public class SettingFragment extends Fragment {
                     case 0:
                         // nhấn vào header
                         Intent intentInfo = new Intent(mContext, InformationActivity.class);
+                        Bundle bundle = new Bundle();
+                        bundle.putString("friendId", user.getUid());
+                        intentInfo.putExtras(bundle);
                         startActivity(intentInfo);
                         break;
                     case 1:

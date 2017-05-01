@@ -160,7 +160,7 @@ public class AvatarChangeActivity extends AppCompatActivity implements View.OnCl
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                 // thành công thì lấy uri bỏ vào user
-                Uri downloadUrl = taskSnapshot.getDownloadUrl();
+                final Uri downloadUrl = taskSnapshot.getDownloadUrl();
                 UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder().setPhotoUri(downloadUrl).build();
                 user.updateProfile(profileUpdates)
                         .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -168,6 +168,7 @@ public class AvatarChangeActivity extends AppCompatActivity implements View.OnCl
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {
                                     Toast.makeText(AvatarChangeActivity.this, "Đổi hình đại diện thành công", Toast.LENGTH_SHORT).show();
+                                    mDatabase.child("users").child(user.getUid()).child("url").setValue(downloadUrl.toString());
                                     Log.d("TAG11", "User profile updated.");
                                     Intent returnIntent = new Intent();
                                     setResult(Activity.RESULT_OK, returnIntent);

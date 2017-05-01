@@ -132,6 +132,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                 Toast.makeText(LoginActivity.this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                 startActivity(intent);
+                                setResult(1002);
+                                finish();
                             }
                             else {
                                 Toast.makeText(LoginActivity.this, "Vui lòng xác nhận tài khoản trong Email của bạn.", Toast.LENGTH_SHORT).show();

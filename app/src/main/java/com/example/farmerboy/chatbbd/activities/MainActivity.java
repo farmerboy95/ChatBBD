@@ -1,5 +1,6 @@
 package com.example.farmerboy.chatbbd.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -20,6 +21,9 @@ import com.example.farmerboy.chatbbd.R;
 import com.example.farmerboy.chatbbd.fragments.ChatListFragment;
 import com.example.farmerboy.chatbbd.fragments.ContactFragment;
 import com.example.farmerboy.chatbbd.fragments.SettingFragment;
+import com.example.farmerboy.chatbbd.services.NewFriendRequestsService;
+import com.example.farmerboy.chatbbd.services.NewMessagesService;
+import com.example.farmerboy.chatbbd.services.UpdateOnlineTimeService;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -66,10 +70,14 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
                     // User is signed in
-                    Log.d("TAG11", "onAuthStateChanged:signed_in:" + user.getUid());
+                    Intent intent = new Intent(MainActivity.this, UpdateOnlineTimeService.class);
+                    startService(intent);
+                    Intent mIntent = new Intent(MainActivity.this, NewMessagesService.class);
+                    startService(mIntent);
+                    Intent rIntent = new Intent(MainActivity.this, NewFriendRequestsService.class);
+                    startService(rIntent);
                 } else {
-                    // User is signed out
-                    Log.d("TAG11", "onAuthStateChanged:signed_out");
+
                 }
             }
         };
@@ -136,5 +144,12 @@ public class MainActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return null;
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Intent intent = new Intent(MainActivity.this, UpdateOnlineTimeService.class);
+        stopService(intent);
     }
 }

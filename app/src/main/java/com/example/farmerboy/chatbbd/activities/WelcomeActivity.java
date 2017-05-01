@@ -78,7 +78,7 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
         int i = v.getId();
         if (i == R.id.btnLogin) {
             Intent intent = new Intent(WelcomeActivity.this, LoginActivity.class);
-            startActivity(intent);
+            startActivityForResult(intent, 1);
         }
         else if (i == R.id.tvRegister) {
             Intent intent = new Intent(WelcomeActivity.this, RegisterActivity.class);

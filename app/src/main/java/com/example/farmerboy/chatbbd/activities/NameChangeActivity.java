@@ -96,14 +96,14 @@ public class NameChangeActivity extends AppCompatActivity implements View.OnClic
     }
 
     private void checkName() {
-        String name = mEtName.getText().toString();
+        final String name = mEtName.getText().toString();
 
         if (name.trim().isEmpty()) {
             Toast.makeText(NameChangeActivity.this, "Vui lòng điền tên hiển thị cần đổi", Toast.LENGTH_SHORT).show();
             return;
         }
         Toast.makeText(NameChangeActivity.this, "Đang xử lý", Toast.LENGTH_SHORT).show();
-        FirebaseUser user = mAuth.getCurrentUser();
+        final FirebaseUser user = mAuth.getCurrentUser();
         UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder().setDisplayName(name).build();
         user.updateProfile(profileUpdates)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -111,6 +111,7 @@ public class NameChangeActivity extends AppCompatActivity implements View.OnClic
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(NameChangeActivity.this, "Đổi tên hiển thị thành công", Toast.LENGTH_SHORT).show();
+                            mDatabase.child("users").child(user.getUid()).child("name").setValue(name);
                             Log.d("TAG11", "User profile updated.");
                             Intent returnIntent = new Intent();
                             setResult(Activity.RESULT_OK, returnIntent);

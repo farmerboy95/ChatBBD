@@ -161,6 +161,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             // thêm mail vào database
                             mDatabase = FirebaseDatabase.getInstance().getReference();
                             mDatabase.child("users").child(user.getUid()).child("mail").setValue(mail);
+                            mDatabase.child("users").child(user.getUid()).child("name").setValue(name);
+                            mDatabase.child("users").child(user.getUid()).child("url").setValue("`");
                             finish();
                         }
                         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);

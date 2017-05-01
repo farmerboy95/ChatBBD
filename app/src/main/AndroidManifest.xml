@@ -3,6 +3,8 @@
     package="com.example.farmerboy.chatbbd">
     
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application
         android:allowBackup="true"
@@ -28,6 +30,14 @@
         <activity android:name=".activities.NameChangeActivity"/>
         <activity android:name=".activities.PasswordChangeActivity"/>
         <activity android:name=".activities.AvatarChangeActivity"/>
+        <activity android:name=".activities.AddFriendActivity"/>
+        <activity android:name=".activities.FriendRequestActivity"/>
+        <activity android:name=".activities.ChatActivity"/>
+        <activity android:name=".activities.SearchFriendActivity"/>
+
+        <service android:name=".services.UpdateOnlineTimeService"/>
+        <service android:name=".services.NewMessagesService"/>
+        <service android:name=".services.NewFriendRequestsService"/>
     </application>
 
 </manifest>
